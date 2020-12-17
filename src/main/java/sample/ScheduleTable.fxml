@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="CENTER" hgap="10.0" vgap="10.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.sample.ScheduleTableController">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+
+    <Label style="-fx-font: NORMAL 20 Tacoma;" text="Schedule" GridPane.columnIndex="0" GridPane.rowIndex="0">
+    </Label>
+    <TableView fx:id="eventTable" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.rowIndex="3">
+        <columns>
+            <TableColumn fx:id="idColumn" editable="false" prefWidth="150" sortable="false" text="ID">
+            </TableColumn>
+            <TableColumn fx:id="titleColumn" editable="false" prefWidth="90" sortable="false" text="Title">
+            </TableColumn>
+            <TableColumn fx:id="locationColumn" editable="false" prefWidth="90" sortable="false" text="Location">
+            </TableColumn>
+            <TableColumn fx:id="datetimeColumn" editable="false" prefWidth="140" text="Date Time">
+            </TableColumn>
+            <TableColumn fx:id="typeColumn" editable="false" prefWidth="110" sortable="false" text="Type">
+            </TableColumn>
+            <TableColumn fx:id="speakerColumn" editable="false" prefWidth="160" sortable="false" text="Speaker">
+            </TableColumn>
+            <TableColumn fx:id="durationColumn" editable="false" prefWidth="90" sortable="false" text="Duration">
+            </TableColumn>
+            <TableColumn fx:id="eventCapacityColumn" editable="false" prefWidth="85" sortable="false" text="Capacity">
+            </TableColumn>
+        </columns>
+    </TableView>
+
+    <ChoiceBox fx:id="searchBy" prefHeight="25.0" prefWidth="150.0" value="ID" GridPane.columnIndex="0" GridPane.rowIndex="4">
+
+    </ChoiceBox>
+
+    <TextField fx:id="searchText" maxWidth="-Infinity" prefHeight="25.0" prefWidth="500.0" promptText="Type to search..." GridPane.columnIndex="1" GridPane.rowIndex="4">
+
+    </TextField>
+
+    <Button fx:id="downloadButton" defaultButton="true" mnemonicParsing="false" onAction="#handleDownloadButton" prefHeight="25.0" prefWidth="255.0" text="Download Full Schedule" GridPane.columnIndex="2" GridPane.rowIndex="4">
+    </Button>
+
+    <Label fx:id="downloadMessage" GridPane.columnIndex="2" GridPane.rowIndex="5" GridPane.rowSpan="2">
+
+    </Label>
+
+    <RadioButton fx:id="fullSchedule" mnemonicParsing="false" onAction="#handleFullSchedule" text="Full Schedule" GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <toggleGroup>
+            <ToggleGroup fx:id="scheduleType" />
+        </toggleGroup>
+    </RadioButton>
+    <RadioButton fx:id="yourSchedule" mnemonicParsing="false" onAction="#handleYourSchedule" text="Your Schedule" toggleGroup="$scheduleType" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    <Label text="Select an event and press SPACE to copy event ID" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.rowIndex="2" />
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>

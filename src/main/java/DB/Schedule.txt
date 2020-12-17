@@ -1,0 +1,15 @@
+List of Rooms in Building: 
+
+[BA12] 
+
+ID: 85bbe224-fce0-4913-9494-fc1a983e33ce 
+Opening ceremony at BA12 on 2020-12-14T13:00
+
+ID: 2c4d245e-bdce-41e6-bb7e-13d1afee1ba8 
+Party at BA12 on 2020-12-15T09:00
+
+ID: 33054db8-3810-480d-9835-935e2736a762 
+Talk at BA12 on 2020-12-15T10:00
+
+ID: 0e84f5ef-84a1-4b85-992d-28c2d3957caa 
+Panel at BA12 on 2020-12-15T11:30
